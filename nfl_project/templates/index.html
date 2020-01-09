@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -13,22 +13,22 @@
     <!-- Bootstrap core CSS -->
     <!-- <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"> -->
     <link rel="stylesheet" type="text/css"
-        href="{{ url_for('static', filename='vendor/bootstrap/css/bootstrap.css') }}">
+          href="{{ url_for('static', filename='vendor/bootstrap/css/bootstrap.css') }}">
 
     <!-- Custom fonts for this template -->
     <!-- <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css"> -->
     <link rel="stylesheet" type="text/css"
-        href="{{ url_for('static', filename='vendor/fontawesome-free/css/all.css') }}">
+          href="{{ url_for('static', filename='vendor/fontawesome-free/css/all.css') }}">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet'
-        type='text/css'>
+          type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
 
     <!-- Custom styles for this template -->
     <!-- <link href="../css/agency.css" rel="stylesheet"> -->
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/agency.css') }}">
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
 </head>
 
 <body id="page-top">
@@ -38,8 +38,8 @@
         <div class="container">
             <a class="navbar-brand js-scroll-trigger" href="#page-top">Can We beat Vegas?</a>
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
-                data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
-                aria-label="Toggle navigation">
+                    data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                    aria-label="Toggle navigation">
                 Menu
                 <i class="fas fa-bars"></i>
             </button>
@@ -160,7 +160,13 @@
                     </a>
                     <div class="portfolio-caption">
                         <h4>Machine Learning</h4>
-                        <p class="text-muted">trained on data from 2015</p>
+                        <p class="text-muted">
+                            trained on data from 2015
+                            <label>Home Team</label><select id="Home_team"></select>
+                            <label>Away Team</label><select id="Away_team"></select>
+                            <label>Vegas Total</label><input type="number" id="BookTotal" />
+                            <label id="vince"></label><button onclick="simplerun()">click me</button>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -173,7 +179,8 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading text-uppercase">Our Betting Model</h2>
-                    <h3 class="section-subheading text-muted">Can we bet Vegas Odds for the Over/Under for NFL games.
+                    <h3 class="section-subheading text-muted">
+                        Can we bet Vegas Odds for the Over/Under for NFL games.
                     </h3>
                 </div>
             </div>
@@ -359,9 +366,11 @@
             </div>
             <div class="row">
                 <div class="col-lg-8 mx-auto text-center">
-                    <p class="large text-muted">Our team is not responsible for any amount of denomination loss using our betting
+                    <p class="large text-muted">
+                        Our team is not responsible for any amount of denomination loss using our betting
                         model.
-                        We will take resposibility for all positive winnings.</p>
+                        We will take resposibility for all positive winnings.
+                    </p>
                 </div>
             </div>
         </div>
@@ -394,7 +403,6 @@
             </div>
         </div>
     </section> -->
-
     <!-- Contact -->
     <!-- <section class="page-section" id="contact">
         <div class="container">
@@ -447,7 +455,6 @@
             </div>
         </div>
     </section> -->
-
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
@@ -474,7 +481,6 @@
     </footer>
 
     <!-- Portfolio Modals -->
-
     <!-- Modal 1 -->
     <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog">
@@ -495,7 +501,8 @@
                                 <p> INSERT TEAM GRAPH</p>
                                 <button class="btn btn-primary" data-dismiss="modal" type="button">
                                     <i class="fas fa-times"></i>
-                                    Close Project</button>
+                                    Close Project
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -524,7 +531,8 @@
                                 <p>INSERT VEGAS GRAPH</p>
                                 <button class="btn btn-primary" data-dismiss="modal" type="button">
                                     <i class="fas fa-times"></i>
-                                    Close Project</button>
+                                    Close Project
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -553,7 +561,8 @@
                                 <p>INSERT GRAPH 3</p>
                                 <button class="btn btn-primary" data-dismiss="modal" type="button">
                                     <i class="fas fa-times"></i>
-                                    Close Project</button>
+                                    Close Project
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -583,6 +592,10 @@
     <!-- <script src="../js/agency.min.js"></script> -->
     <script type="text/javascript" src="/static/js/agency.js"></script>
 
+    <!-- A call to awesome js file -->
+    <script src="/static/js/vince.js"></script>
+    <!--need this for d3-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
 </body>
 
 </html>
