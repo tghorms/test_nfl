@@ -89,7 +89,7 @@
                         <i class="fas fa-money-bill fa-stack-1x fa-inverse"></i>
                     </span>
                     <h4 class="service-heading">Why?</h4>
-                    <p class="text-muted">Develop a regression model that can recommend to bettors whether teams are
+                    <p class="text-muted">Develop a sequential model that can recommend to bettors whether teams are
                         likely to go over or under the set line.</p>
                 </div>
                 <div class="col-md-4">
@@ -124,7 +124,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-4 col-sm-6 portfolio-item">
+                <div class="col-md-6 col-sm-6 portfolio-item">
                     <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content">
@@ -138,21 +138,8 @@
                         <p class="text-muted">NFL Team Comparision</p>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fas fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img class="img-fluid" src="static/img/portfolio/las_vegas_pic.jpeg" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Vegas Odds</h4>
-                        <p class="text-muted">Over/Under odds</p>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 portfolio-item">
+                
+                <div class="col-md-6 col-sm-6 portfolio-item">
                     <a class="portfolio-link" data-toggle="modal" href="#portfolioModal3">
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content">
@@ -180,93 +167,25 @@
                     </h3>
                 </div>
             </div>
-            <p class="text-muted">
-                <label>Home Team</label><select id="Home_team"></select>
-                <label>Away Team</label><select id="Away_team"></select>
-                <label>Vegas Total</label><input type="number" id="BookTotal" />
-                <label id="vince"></label><button onclick="simplerun()">click me</button>
-            </p>
-            <!-- <div class="row">
-                <div class="col-lg-12">
-                    <ul class="timeline">
-                        <li>
-                            <div class="timeline-image">
-                                <img class="rounded-circle img-fluid" src="static/img/about/1.jpg" alt="">
-                            </div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4>2009-2011</h4>
-                                    <h4 class="subheading">Our Humble Beginnings</h4>
-                                </div>
-                                <div class="timeline-body">
-                                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt
-                                        ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam,
-                                        recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!
-                                    </p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="timeline-inverted">
-                            <div class="timeline-image">
-                                <img class="rounded-circle img-fluid" src="static/img/about/2.jpg" alt="">
-                            </div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4>March 2011</h4>
-                                    <h4 class="subheading">An Agency is Born</h4>
-                                </div>
-                                <div class="timeline-body">
-                                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt
-                                        ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam,
-                                        recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!
-                                    </p>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="timeline-image">
-                                <img class="rounded-circle img-fluid" src="static/img/about/3.jpg" alt="">
-                            </div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4>December 2012</h4>
-                                    <h4 class="subheading">Transition to Full Service</h4>
-                                </div>
-                                <div class="timeline-body">
-                                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt
-                                        ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam,
-                                        recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!
-                                    </p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="timeline-inverted">
-                            <div class="timeline-image">
-                                <img class="rounded-circle img-fluid" src="static/img/about/4.jpg" alt="">
-                            </div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4>July 2014</h4>
-                                    <h4 class="subheading">Phase Two Expansion</h4>
-                                </div>
-                                <div class="timeline-body">
-                                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt
-                                        ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam,
-                                        recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!
-                                    </p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="timeline-inverted">
-                            <div class="timeline-image">
-                                <h4>Be Part
-                                    <br>Of Our
-                                    <br>Story!</h4>
-                            </div>
-                        </li>
-                    </ul>
-                </div> -->
-            <!-- </div> -->
+            <div class="odd-shark row">
+                <div class = "col-lg-12 text-center">
+                    <img class="img-fluid d-block mx-auto" src="static/img/logos/odds_photo.jpg" alt="">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <p class="text-muted">
+                        <label>Home Team</label>
+                        <select id="Home_team"></select>
+                        <label>Away Team</label>
+                        <select id="Away_team"></select>
+                        <label>Predicted Total</label>
+                        <input type="number" id="BookTotal" />
+                        <label id="vince"></label>
+                        <button class="btn btn-primary btn-xl text-uppercase" onclick="simplerun()">Click Me</button>
+                    </p>
+                </div>
+            </div>
         </div>
     </section>
     <section class="page-section" id="about">
@@ -405,7 +324,8 @@
                             <div class="modal-body">
                                 <!-- Project Details Go Here -->
                                 <h2 class="text-uppercase">Team stats for the 2019 regular season</h2>
-                                <p class="item-intro text-muted">Click on a team's win percentage to filter team stats.</p>
+                                <p class="item-intro text-muted">Click on a team's win percentage to filter team stats.
+                                </p>
                                 <div class='tableauPlaceholder' id='viz1578613625683' style='position: relative'>
                                     <noscript>
                                         <a href='#'><img alt=''
@@ -513,10 +433,11 @@
                                 <!-- Project Details Go Here -->
                                 <h2 class="text-uppercase">Machine Learning Model</h2>
                                 <p class="item-intro text-muted">Graph of the model loss.
-                                    Loss is the penalty of a bad prediction. 
+                                    Loss is the penalty of a bad prediction.
                                     It is a number indicating how bad the models' prediction was in a single example.
                                 </p>
-                                <img class="img-fluid d-block mx-auto" src="static/img/logos/machine-learning-graph.png" alt="">
+                                <img class="img-fluid d-block mx-auto" src="static/img/logos/machine-learning-graph.png"
+                                    alt="">
                                 <!-- <p>INSERT GRAPH 3</p> -->
                                 <button class="btn btn-primary" data-dismiss="modal" type="button">
                                     <i class="fas fa-times"></i>
