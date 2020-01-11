@@ -2,10 +2,8 @@
   "ExpandedNodes": [
     "",
     "\\static",
-    "\\static\\models",
     "\\static\\python_scripts",
-    "\\templates"
+    "\\static\\resources"
   ],
-  "SelectedNode": "\\static\\python_scripts\\model_run_v1.py",
   "PreviewInSolutionExplorer": false
 }

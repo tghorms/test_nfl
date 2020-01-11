@@ -9,16 +9,16 @@ function simplerun() {
     console.log(Home_team)
     console.log(Away_team)
     console.log(Book_Total)
-
-    d3.json("/x").then((response) => {
+    
+    d3.json('/x/' + Home_team + '/' + Away_team + '/' + Book_Total).then((response) => {
         document.getElementById("vince").innerHTML=response
     })     
 }
 //creates the team listing on the webpage.
 function init() {
     console.log("vince")
-    //Team_Call("#Home_team")
-    //Team_Call("#Away_team")
+    Team_Call("#Home_team")
+    Team_Call("#Away_team")
 }
 
 //function to call to create teams
@@ -29,8 +29,9 @@ function Team_Call(str_IDselector) {
             home_selector
                 .append("option")
                 .text(sample.Home_Team)
-                .property("value", sample.ID)
+                .property("value", sample.Home_team)
         })
+
     })
 }
 
