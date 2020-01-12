@@ -36,7 +36,7 @@ def prediction(TeamH,TeamA,BookScore):
 
 
     stats = np.empty
-    with open('./static/resources/2019-Team-Metrics-Final.csv') as csvfile:
+    with open('2019-Team-Metrics-Final.csv') as csvfile:
         readCSV = csv.reader(csvfile, delimiter=',')
         for row in readCSV:
             if row [0] == TeamH:
@@ -45,7 +45,7 @@ def prediction(TeamH,TeamA,BookScore):
                 
                 # print(row)
 
-    with open('./static/resources/2019-Team-Metrics-Final.csv') as csvfile:
+    with open('2019-Team-Metrics-Final.csv') as csvfile:
         readCSV = csv.reader(csvfile, delimiter=',')
         for row in readCSV:
             if row [0] == TeamA:
