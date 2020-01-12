@@ -41,7 +41,7 @@ def prediction(TeamH,TeamA,BookScore):
         for row in readCSV:
             if row [0] == TeamH:
                 for x in row[1:]:
-                    stats = np.append(stats, x)
+                    stats = np.append(stats, float(x))
                 
                 # print(row)
 
@@ -51,7 +51,7 @@ def prediction(TeamH,TeamA,BookScore):
             if row [0] == TeamA:
                 test = row[1:]
                 for x in test :
-                    stats = np.append(stats, x)
+                    stats = np.append(stats, float(x))
         # print(stats)
     
     npx = stats[1:65]
@@ -63,9 +63,11 @@ def prediction(TeamH,TeamA,BookScore):
     #home_team = XDF['Team'].unique()
     #print(home_team)
     football = load_models()
-    graph = tf.get_default_graph()
-    with graph.as_default():
-        prediction = football.predict([[npx]])
+    # graph = tf.get_default_graph()
+    # with graph.as_default():
+  
+    data_tf = tf.convert_to_tensor(npx, np.float32)
+    prediction = football.predict([[data_tf]])
     result = {'x':int(prediction[0][0])}
     print(result)
     return jsonify(result)
