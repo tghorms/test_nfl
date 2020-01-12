@@ -9,7 +9,7 @@ from numpy import loadtxt
 
 #from model_run_v1 import suckit
 # from static.python_scripts.model_run_v1 import runme,load_models
-from static.python_scripts.model_run_v1 import load_models
+from model_run_v1 import load_models
 # create instance of Flask app
 app = Flask(__name__)
 
