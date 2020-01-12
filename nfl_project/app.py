@@ -73,7 +73,7 @@ def prediction(TeamH,TeamA,BookScore):
 @app.route("/y") 
 def teams():
     #creates list of team name
-    df = pd.read_csv('./static/resources/Teams.csv')
+    df = pd.read_csv('Teams.csv')
     return df.to_json(orient='records')
 
 
