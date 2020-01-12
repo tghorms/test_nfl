@@ -5,7 +5,9 @@ import os
 import pandas as pd
 def load_models():
     mymodel=None
-    modelfile=os.path.dirname(__file__) +'\\vince-model-final.h5'    
+    # modelfile=os.path.dirname(__file__) +'\\vince-model-final.h5'
+    modelfile = 'vince-model-final.h5'
+    # print('modelisat'+modelfile)    
     mymodel = load_model(modelfile)
     return mymodel
 

@@ -11,7 +11,8 @@ function simplerun() {
     console.log(Book_Total)
     
     d3.json('/x/' + Home_team + '/' + Away_team + '/' + Book_Total).then((response) => {
-        document.getElementById("vince").innerHTML=response
+     
+        document.getElementById("BookTotal").value=response.x
     })     
 }
 //creates the team listing on the webpage.
