@@ -1,1 +1,2 @@
-FLASK_APP=nfl_project/app.py flask run
+cd nfl_project
+FLASK_APP=app.py flask run
