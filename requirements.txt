@@ -10,7 +10,7 @@ bleach==3.1.0
 bs4==0.0.1
 CD==1.1.0
 census==0.8.13
-certifi==2019.11.28
+certifi==2022.12.7
 cffi==1.12.3
 Click==7.0
 gunicorn==20.0.4
